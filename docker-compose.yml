@@ -1,0 +1,9 @@
+services:
+  wyopiper-rocm:
+    image: rhasspy/wyoming-piper
+    command: '--uri "tcp://0.0.0.0:10200" --voice de_DE-kerstin-low --data-dir /opt/llm-dl'
+    container_name: wyopiper-rocm
+    volumes:
+      - /opt/llm-dl:/opt/llm-dl
+    network_mode: host
+    restart: always
